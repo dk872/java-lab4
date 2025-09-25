@@ -45,13 +45,13 @@ public class Main {
         try {
             taxi.boardPassenger(alice); // Alice is already on the bus
         } catch (IllegalStateException ex) {
-            System.out.println("[ERROR] " + ex.getMessage());
+            System.out.println("Error: " + ex.getMessage());
         }
 
         try {
             bus.boardPassenger(charlie); // Charlie is already in the taxi
         } catch (IllegalStateException ex) {
-            System.out.println("[ERROR] " + ex.getMessage());
+            System.out.println("Error: " + ex.getMessage());
         }
 
         // Add transports to road
@@ -81,7 +81,7 @@ public class Main {
             taxi.boardPassenger(diana); // OK
             taxi.boardPassenger(edward); // May fail due to capacity
         } catch (IllegalStateException ex) {
-            System.out.println("\n[ERROR] " + ex.getMessage());
+            System.out.println("\nError: " + ex.getMessage());
         }
     }
 }
